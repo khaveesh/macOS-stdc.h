@@ -17,9 +17,9 @@ This is a problem even when you use g++ in macOS, as Apple use g++ as a frontend
 
 2. You need to copy the contents of the [stdc++.h](../blob/master/stdc++.h) included in this repository into the newly created bits folder:
 
-    ````fish
-    curl https://raw.githubusercontent.com/khaveesh/macOS-bits-stdc-.h/master/stdc%2B%2B.h > /usr/local/include/bits/stdc++.h```
-    ````
+    ```fish
+    curl https://raw.githubusercontent.com/khaveesh/macOS-bits-stdc-.h/master/stdc%2B%2B.h > /usr/local/include/bits/stdc++.h
+    ```
 
 3. Profit! You can now write:
 
@@ -35,7 +35,7 @@ There is a reason why Clang and even Microsoft do not include this file in their
 
 bits/stdc++.h is a non-standard header file containing a list of **_all_** header files available. Everyone who has written atleast a moderately complex program in C++ know how much of a pain-in-the-a\*\* it is to find the appropriate header file for all the builtins used. So it is an easier way out to just include this bits/stdc++.h. But this means that all header files regardless of whether you're using them or not, are included in your code. This increases the compilation time of your code. This is especially noticeable in Competetive Programming where coders usually change one or two lines at max and frequently compile when debugging. Thus this delay in compilation adds up. So it is better to spend some time to know which functions you're using and include only the minimum required header files.
 
-# TLDR
+## TLDR
 
 Copy and paste the following commands in your Mac terminal:
 
@@ -51,7 +51,7 @@ curl https://raw.githubusercontent.com/khaveesh/macOS-bits-stdc-.h/master/stdc%2
 
 ## Source
 
-The stdc++.h file is created from the **latest** stdc++.h file in the GCC git repository with the non-Mac include directives removed. [Link](https://raw.githubusercontent.com/gcc-mirror/gcc/master/libstdc%2B%2B-v3/include/precompiled/stdc%2B%2B.h)
+The stdc++.h file is created from the **latest** stdc++.h file in the [GCC git repository](https://raw.githubusercontent.com/gcc-mirror/gcc/master/libstdc%2B%2B-v3/include/precompiled/stdc%2B%2B.h) with the non-Mac include directives removed.
 
 ## License: GPLv3
 
