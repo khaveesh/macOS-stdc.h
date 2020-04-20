@@ -10,11 +10,22 @@ This is a problem even when you use g++ in macOS, as Apple use g++ as a frontend
 
 1. You need to create a directory 'bits' under the folder /usr/local/include.
    This can be done by opening Terminal and running the following commands:
-   `mkdir /usr/local/include`
+
+    ```fish
+    mkdir /usr/local/include
+    ```
+
 2. You need to copy the contents of the [stdc++.h](../blob/master/stdc++.h) included in this repository into the newly created bits folder:
-   `curl https://raw.githubusercontent.com/khaveesh/macOS-bits-stdc-.h/master/stdc%2B%2B.h > /usr/local/include/bits/stdc++.h`
+
+    ````fish
+    curl https://raw.githubusercontent.com/khaveesh/macOS-bits-stdc-.h/master/stdc%2B%2B.h > /usr/local/include/bits/stdc++.h```
+    ````
+
 3. Profit! You can now write:
-   `#include <bits/stdc++.h>`
+
+    ```fish
+    #include <bits/stdc++.h>`
+    ```
 
 ## Recommendation
 
@@ -27,8 +38,15 @@ bits/stdc++.h is a non-standard header file containing a list of **_all_** heade
 # TLDR
 
 Copy and paste the following commands in your Mac terminal:
-`mkdir /usr/local/include`
-`curl https://raw.githubusercontent.com/khaveesh/macOS-bits-stdc-.h/master/stdc%2B%2B.h > /usr/local/include/bits/stdc++.h`
+
+```fish
+mkdir /usr/local/include
+```
+
+```fish
+curl https://raw.githubusercontent.com/khaveesh/macOS-bits-stdc-.h/master/stdc%2B%2B.h > /usr/local/include/bits/stdc++.h
+```
+
 **But this is bad coding practice and you should consider this as a stopgap solution only and refrain from using this.**
 
 ## Source
@@ -37,4 +55,4 @@ The stdc++.h file is created from the **latest** stdc++.h file in the GCC git re
 
 ## License: GPLv3
 
-**Fun Fact**: This license was one of the primary reasons why Apple decided to fund the fledgling LLVM Compiler team in the University of Illinois. [Apple's Great GPL Purge](http://meta.ath0.com/2012/02/05/apples-great-gpl-purge/) to know more.
+**Fun Fact**: This license was one of the primary reasons why Apple decided to fund the fledgling LLVM Compiler team in the University of Illinois. Read [Apple's Great GPL Purge](http://meta.ath0.com/2012/02/05/apples-great-gpl-purge/) to know more.
