@@ -11,7 +11,7 @@ This is a problem even when you use g++ in macOS, as Apple use g++ as a front-en
 1.  You need to create a directory 'bits' under the folder /usr/local/include. This can be done by running the following command in the Terminal:
 
     ``` {.fish}
-    mkdir /usr/local/include
+    mkdir /usr/local/include/bits
     ```
 
 2.  You need to copy the contents of the [stdc++.h](../blob/master/stdc++.h) included in this repository into the newly created bits folder:
@@ -32,13 +32,13 @@ There is a reason why Apple(Clang) and even Microsoft(Visual C++) do not include
 
 ### Explanation
 
-bits/stdc++.h is a non-standard header file containing a list of ***all*** header files available in the GCC stdc++ library. Everyone who has written atleast a moderately complex program in C++, knows how much of a pain-in-the-a\*\* it is, to find the appropriate header file for all the builtins used. So it is an easier way out to just include bits/stdc++.h. But this means that all header files regardless of whether you're using them or not, are included in your code. This increases the compilation time of your code. This is especially detrimental in ***Competitive Programming*** where coders usually change one or two lines at max and frequently recompile when debugging. Thus this delay in compilation adds up. So it is better to spend some time to analyse which functions you're using and include only the minimal required header files.
+bits/stdc++.h is a non-standard header file containing a list of ***all*** header files available in the GCC stdc++ library. Everyone who has written at least a moderately complex program in C++, knows how much of a pain-in-the-a\*\* it is, to find the appropriate header file for all the builtins used. So it is an easier way out to just include bits/stdc++.h. But this means that all header files regardless of whether you're using them or not, are included in your code. This increases the compilation time of your code. This is especially detrimental in ***Competitive Programming*** where coders usually change one or two lines at max and frequently recompile when debugging. Thus this delay in compilation adds up. So it is better to spend some time to analyse which functions you're using and include only the minimal required header files.
 
 ## TL;DR
 
 Copy and paste the following commands in your Mac terminal:
 
--   `fish     mkdir /usr/local/include`
+-   `fish     mkdir /usr/local/include/bits`
 
 -   `fish     curl https://raw.githubusercontent.com/khaveesh/macOS-bits-stdc-.h/master/stdc%2B%2B.h > /usr/local/include/bits/stdc++.h`
 
