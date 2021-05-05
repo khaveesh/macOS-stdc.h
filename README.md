@@ -3,8 +3,8 @@
 ## Support for &lt;bits/stdc++.h&gt; in macOS
 
 macOS ships by default with the LLVM/Clang compiler which does not
-support GNU/GCC extensions such as the &lt;bits/stdc++.h&gt; header file
-that every beginner tends to use in their C++ code.
+support GNU/GCC extensions such as the `bits/stdc++.h` header file that
+every beginner tends to use in their C++ code.
 
 This is a problem even when you use g++ in macOS, as Apple use g++ as a
 front-end to clang++ for legacy reasons.
@@ -52,16 +52,16 @@ increases the compilation time of your code. This is especially
 detrimental in ***Competitive Programming*** where coders usually change
 one or two lines at max and frequently recompile when debugging. Thus
 this delay in compilation adds up. So it is better to spend some time to
-analyse which functions you’re using and include only the minimal
-required header files.
+analyse which functions you’re using and include only the minimal number
+of required header files.
 
 ## TL;DR
 
 Copy and paste the following commands in your Mac terminal:
 
--   `mkdir /usr/local/include/bits`
+1.  `mkdir /usr/local/include/bits`
 
--   `https://raw.githubusercontent.com/khaveesh/macOS-bits-stdc-.h/master/stdc%2B%2B.h > /usr/local/include/bits/stdc++.h`
+2.  `https://raw.githubusercontent.com/khaveesh/macOS-stdc.h/master/stdc%2B%2B.h > /usr/local/include/bits/stdc++.h`
 
 **But this is bad coding practice and you should consider this only as a
 stopgap solution and refrain from using it.**
