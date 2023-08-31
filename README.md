@@ -61,7 +61,7 @@ Copy and paste the following commands in your Mac terminal:
 
 1.  `mkdir /usr/local/include/bits`
 
-2.  `https://raw.githubusercontent.com/khaveesh/macOS-stdc.h/master/stdc%2B%2B.h > /usr/local/include/bits/stdc++.h`
+2.  `curl https://raw.githubusercontent.com/khaveesh/macOS-stdc.h/master/stdc%2B%2B.h > /usr/local/include/bits/stdc++.h`
 
 **But this is bad coding practice and you should consider this only as a
 stopgap solution and refrain from using it.**
